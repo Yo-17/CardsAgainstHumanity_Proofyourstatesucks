@@ -124,4 +124,12 @@ SELECT penalty_female.PatientPenalty, penalty_female.f_penalty_count, penalty_ma
 FROM penalty_female
 LEFT JOIN penalty_male ON penalty_female.PatientPenalty = penalty_male.PatientPenalty;
 
+##Query 5: Organizar de mayor a menor los Estados con mayor numero de personas que aprueban la anulacion de la sentencia de Roe v. Wade
+Drop table Yes_CourtApproval_by_State;
 
+CREATE TABLE Yes_CourtApproval_by_State AS
+SELECT State,
+COUNT(IF(CourtApproval = 'Yes', State, NULL)) AS Buu_RvW 
+FROM CAH_table01 GROUP BY State ORDER BY Buu_RvW DESC;
+
+Select * From Yes_CourtApproval_by_State;
