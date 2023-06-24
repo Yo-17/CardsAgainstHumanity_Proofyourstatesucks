@@ -28,3 +28,5 @@ CREATE TABLE Male_Participants AS
   CREATE TABLE Political_Party_Frequency AS
   SELECT Count(5_PoliticalParty) AS Total 
   FROM CAH_table01 group by 5_PoliticalParty;
+
+#TESTCHANGE
