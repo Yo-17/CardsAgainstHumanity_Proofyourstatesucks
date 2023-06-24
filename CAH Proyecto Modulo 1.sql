@@ -77,3 +77,35 @@ LEFT JOIN grad_degree ON some_high_school.AbortionViews = grad_degree.AbortionVi
 LEFT JOIN bach_degree ON some_high_school.AbortionViews = bach_degree.AbortionViews;
 
 SELECT * FROM AbortionView_by_Education;
+
+## Query 3: Agrupar por opinion de la separacion del Edo y la Iglesia segun afiliacion a partido politico - SepChurchState_by_PoliticalParty
+Drop table Stop_Enforcing;
+
+#Create Enforce_Separation
+CREATE TABLE Enforce_Separation AS
+SELECT PoliticalParty, count(ParticipantID) AS Enforce_Separation_count 
+FROM CAH_table01 WHERE SepChurchState = "The federal government should enforce separation of church and state." 
+GROUP BY PoliticalParty;
+
+SELECT PoliticalParty, Enforce_Separation_count,
+round(((Enforce_Separation_count * 100) / temp.Enforce_Separation_countSUM),2) AS Enforce_Separation_Percentage
+FROM Enforce_Separation
+CROSS JOIN (SELECT SUM(Enforce_Separation_count) AS Enforce_Separation_countSUM FROM Enforce_Separation) temp;
+
+#Create Stop_Enforcing
+CREATE TABLE Stop_Enforcing AS
+SELECT PoliticalParty, count(ParticipantID) AS Stop_Enforcing_count 
+FROM CAH_table01 WHERE SepChurchState = "The federal government should stop enforcing separation of church and state." 
+GROUP BY PoliticalParty;
+
+SELECT PoliticalParty, Stop_Enforcing_count,
+round(((Stop_Enforcing_count * 100) / temp.Stop_Enforcing_countSUM),2) AS Stop_Enforcing_Percentage
+FROM Stop_Enforcing
+CROSS JOIN (SELECT SUM(Stop_Enforcing_count) AS Stop_Enforcing_countSUM FROM Stop_Enforcing) temp;
+
+# Table - SepChurchState_by_PoliticalParty 
+## Percentage columns are not included in this table, look for solutions 
+CREATE TABLE SepChurchState_by_PoliticalParty AS
+SELECT Enforce_Separation.PoliticalParty, Enforce_Separation.Enforce_Separation_count, Stop_Enforcing.Stop_Enforcing_count
+FROM Enforce_Separation
+LEFT JOIN Stop_Enforcing ON Enforce_Separation.PoliticalParty = Stop_Enforcing.PoliticalParty;
