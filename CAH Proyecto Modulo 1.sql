@@ -34,16 +34,16 @@ CREATE TABLE Male_Participants AS
 ## Query 2: Agrupar por puntos de vista politico segun nivel educativo - Tabla PoliView_by_Education
 SELECT * FROM CAH_table01;
 
-CREATE TABLE some_high_school AS
+CREATE TEMPORARY TABLE some_high_school AS
 SELECT PoliticalViews, count(ParticipantID) AS some_high_school_count FROM CAH_table01 WHERE education = "Some high school" GROUP BY PoliticalViews;
 
-CREATE TABLE high_school AS
+CREATE TEMPORARY TABLE high_school AS
 SELECT PoliticalViews, count(ParticipantID) AS high_school_count FROM CAH_table01 WHERE education = "High school or high school equivalent" GROUP BY PoliticalViews;
 
-CREATE TABLE grad_degree AS
+CREATE TEMPORARY TABLE grad_degree AS
 SELECT PoliticalViews, count(ParticipantID) AS grad_degree_count FROM CAH_table01 WHERE education = "Graduate degree" GROUP BY PoliticalViews;
 
-CREATE TABLE bach_degree AS
+CREATE TEMPORARY TABLE bach_degree AS
 SELECT PoliticalViews, count(ParticipantID) AS bach_degree_count FROM CAH_table01 WHERE education = "Bachelor's degree or equivalent" GROUP BY PoliticalViews;
 
 CREATE TABLE PoliView_by_Education AS
