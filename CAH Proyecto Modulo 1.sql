@@ -79,7 +79,7 @@ LEFT JOIN bach_degree ON some_high_school.AbortionViews = bach_degree.AbortionVi
 SELECT * FROM AbortionView_by_Education;
 
 ## Query 3: Agrupar por opinion de la separacion del Edo y la Iglesia segun afiliacion a partido politico - SepChurchState_by_PoliticalParty
-Drop table Stop_Enforcing;
+#Drop table Stop_Enforcing;
 
 #Create Enforce_Separation
 CREATE TABLE Enforce_Separation AS
@@ -104,8 +104,24 @@ FROM Stop_Enforcing
 CROSS JOIN (SELECT SUM(Stop_Enforcing_count) AS Stop_Enforcing_countSUM FROM Stop_Enforcing) temp;
 
 # Table - SepChurchState_by_PoliticalParty 
-## Percentage columns are not included in this table, look for solutions 
+## Percentage columns are not included in this table, looking for solutions 
 CREATE TABLE SepChurchState_by_PoliticalParty AS
 SELECT Enforce_Separation.PoliticalParty, Enforce_Separation.Enforce_Separation_count, Stop_Enforcing.Stop_Enforcing_count
 FROM Enforce_Separation
 LEFT JOIN Stop_Enforcing ON Enforce_Separation.PoliticalParty = Stop_Enforcing.PoliticalParty;
+
+##Query 4: Criminalizacion del Aborto - Opiniones por genero - PatientPenalty_by_Gender
+#Drop table penalty_female;
+
+CREATE TEMPORARY TABLE penalty_female AS
+SELECT PatientPenalty, count(ParticipantID) AS f_penalty_count FROM Female_Participants GROUP BY PatientPenalty;
+
+CREATE TEMPORARY TABLE penalty_male AS
+SELECT PatientPenalty, count(ParticipantID) AS m_penalty_count FROM Male_Participants GROUP BY PatientPenalty;
+
+CREATE TABLE PatientPenalty_by_Gender AS
+SELECT penalty_female.PatientPenalty, penalty_female.f_penalty_count, penalty_male.m_penalty_count
+FROM penalty_female
+LEFT JOIN penalty_male ON penalty_female.PatientPenalty = penalty_male.PatientPenalty;
+
+
