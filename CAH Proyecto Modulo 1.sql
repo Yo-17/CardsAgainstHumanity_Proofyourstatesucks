@@ -157,7 +157,7 @@ FROM CAH_table01 GROUP BY State ORDER BY Buu_RvW DESC;
 
 Select * From Yes_CourtApproval_by_State;
 
-##Query 6: Que tan de acredo se encuentran las personas encuestadas con las leyes sobre el aborto en sus estados - 
+##Query 6: Que tan de acuedo se encuentran las personas encuestadas con las leyes sobre el aborto en sus estados - StateLawViews_by_State
 #DROP TABLE more_restrictive_by_State;
 
 CREATE TEMPORARY TABLE unfamiliar_by_State AS
@@ -188,3 +188,23 @@ LEFT JOIN more_permissive_by_State ON unfamiliar_by_State.State = more_permissiv
 LEFT JOIN more_restrictive_by_State ON unfamiliar_by_State.State = more_restrictive_by_State.State;
 
 SELECT * FROM StateLawViews_by_State;
+
+##Query 7: La opinion sobre la pena de muerte agrupado por posicionamiento ideologico de los participantes - DeathPenaltyViews_by_PoliticalViews
+#DROP TABLE morally_justified;
+
+CREATE TEMPORARY TABLE morally_wrong AS
+SELECT PoliticalViews,
+COUNT(IF(DeathPenaltyViews = "The death penalty is morally wrong, even when someone commits multiple murders.", PoliticalViews, NULL)) AS morally_wrong_count 
+FROM CAH_table01 GROUP BY PoliticalViews;
+
+CREATE TEMPORARY TABLE morally_justified AS
+SELECT PoliticalViews,
+COUNT(IF(DeathPenaltyViews = "When someone commits multiple murders, the death penalty is morally justified.", PoliticalViews, NULL)) AS morally_justified_count 
+FROM CAH_table01 GROUP BY PoliticalViews;
+
+CREATE TABLE DeathPenaltyViews_by_PoliticalViews AS
+SELECT morally_wrong.PoliticalViews, morally_wrong.morally_wrong_count, morally_justified.morally_justified_count
+FROM morally_wrong
+LEFT JOIN morally_justified ON morally_wrong.PoliticalViews = morally_justified.PoliticalViews;
+
+SELECT * FROM DeathPenaltyViews_by_PoliticalViews;
