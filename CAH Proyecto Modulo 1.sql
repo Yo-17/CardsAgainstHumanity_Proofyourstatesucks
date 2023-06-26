@@ -31,6 +31,29 @@ CREATE TABLE Male_Participants AS
   SELECT Count(PoliticalParty) AS Total 
   FROM CAH_table01 group by PoliticalParty;
 
+## 1 Query: Agrupar por puntos de vista politico segun nivel educativo - Tabla PoliView_by_Education
+SELECT * FROM CAH_table01;
+DROP TABLE some_high_school;
+
+CREATE TABLE some_high_school AS
+SELECT PoliticalViews, count(ParticipantID) AS some_high_school_count FROM CAH_table01 WHERE Education = "Some high school" GROUP BY PoliticalViews;
+
+CREATE TABLE high_school AS
+SELECT PoliticalViews, count(ParticipantID) AS high_school_count FROM CAH_table01 WHERE Education = "High school or high school equivalent" GROUP BY PoliticalViews;
+
+CREATE TABLE grad_degree AS
+SELECT PoliticalViews, count(ParticipantID) AS grad_degree_count FROM CAH_table01 WHERE Education = "Graduate degree" GROUP BY PoliticalViews;
+
+CREATE TABLE bach_degree AS
+SELECT PoliticalViews, count(ParticipantID) AS bach_degree_count FROM CAH_table01 WHERE Education = "Bachelor's degree or equivalent" GROUP BY PoliticalViews;
+
+CREATE TABLE PoliView_by_Education AS
+SELECT some_high_school.PoliticalViews, some_high_school.some_high_school_count, high_school.high_school_count, grad_degree.grad_degree_count, bach_degree.bach_degree_count
+FROM some_high_school
+LEFT JOIN high_school ON some_high_school.PoliticalViews = high_school.PoliticalViews
+LEFT JOIN grad_degree ON some_high_school.PoliticalViews = grad_degree.PoliticalViews
+LEFT JOIN bach_degree ON some_high_school.PoliticalViews = bach_degree.PoliticalViews;
+
 ## Query 2: Agrupar por puntos de vista politico segun nivel educativo - Tabla PoliView_by_Education
 SELECT * FROM CAH_table01;
 
@@ -124,7 +147,7 @@ SELECT penalty_female.PatientPenalty, penalty_female.f_penalty_count, penalty_ma
 FROM penalty_female
 LEFT JOIN penalty_male ON penalty_female.PatientPenalty = penalty_male.PatientPenalty;
 
-##Query 5: Organizar de mayor a menor los Estados con mayor numero de personas que aprueban la anulacion de la sentencia de Roe v. Wade
+##Query 5: Organizar de mayor a menor los Estados con mayor numero de personas que aprueban la anulacion de la sentencia de Roe v. Wade - Yes_CourtApproval_by_State
 Drop table Yes_CourtApproval_by_State;
 
 CREATE TABLE Yes_CourtApproval_by_State AS
@@ -133,3 +156,4 @@ COUNT(IF(CourtApproval = 'Yes', State, NULL)) AS Buu_RvW
 FROM CAH_table01 GROUP BY State ORDER BY Buu_RvW DESC;
 
 Select * From Yes_CourtApproval_by_State;
+
