@@ -1,0 +1,108 @@
+Query 8 - Mongo DB
+
+Determinar el promedio por género la opinión de embarazos accidentales con condón en un plazo en 1 año.
+
+*Para hombre 
+
+db.getCollection('CAH_Data').aggregate(
+  [
+    { $project: { Gender: 1, Condoms: 1 } },
+    { $match: { Gender: 'Man' } },
+    {
+      $group: {
+        _id: '$Gender',
+        avg_Condoms: { $avg: '$Condoms' }
+      }
+    }
+  ]
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
+
+*Para mujer 
+
+db.getCollection('CAH_Data').aggregate(
+  [
+    { $project: { Gender: 1, Condoms: 1 } },
+    { $match: { Gender: 'Woman' } },
+    {
+      $group: {
+        _id: '$Gender',
+        avg_Condoms: { $avg: '$Condoms' }
+      }
+    }
+  ]
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
+
+Query 9 
+
+Determinar el promedio por genero de la opinion de embarazos accidentales con anticonceptivos en un año.
+
+
+*Por hombre 
+
+db.getCollection('CAH_Data').aggregate(
+  [
+    { $project: { Gender: 1, Pill: 1 } },
+    { $match: { Gender: 'Man' } },
+    {
+      $group: {
+        _id: '$Gender',
+        avg_Pill: { $avg: '$Pill' }
+      }
+    }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
+
+
+*Por Mujer
+
+db.getCollection('CAH_Data').aggregate(
+  [
+    { $project: { Gender: 1, Pill: 1 } },
+    { $match: { Gender: 'Woman' } },
+    {
+      $group: {
+        _id: '$Gender',
+        avg_Pill: { $avg: '$Pill' }
+      }
+    }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
+
+
+Query 10
+Determinar el promedio por genero de la opinion de embarazos accidentales con método "Pulling out" en un año.
+
+*por hombre 
+
+db.getCollection('CAH_Data').aggregate(
+  [
+    { $project: { Gender: 1, PullingOut: 1 } },
+    { $match: { Gender: 'Man' } },
+    {
+      $group: {
+        _id: '$Gender',
+        avg_PullingOut: { $avg: '$PullingOut' }
+      }
+    }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
+
+*por mujer 
+db.getCollection('CAH_Data').aggregate(
+  [
+    { $project: { Gender: 1, PullingOut: 1 } },
+    { $match: { Gender: 'Woman' } },
+    {
+      $group: {
+        _id: '$Gender',
+        avg_PullingOut: { $avg: '$PullingOut' }
+      }
+    }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
