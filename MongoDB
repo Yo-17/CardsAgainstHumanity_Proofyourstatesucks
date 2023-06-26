@@ -106,3 +106,102 @@ db.getCollection('CAH_Data').aggregate(
   ],
   { maxTimeMS: 60000, allowDiskUse: true }
 );
+
+
+
+***Prueba 
+
+Los 5 estados que se consideran conformes con las leyes del aborto.
+
+
+db.getCollection('CAH_Data').aggregate(
+  [
+    { $project: { StateLawViews: 1, State: 1 } },
+    {
+      $match: {
+        StateLawViews:
+          "My state's abortion laws are about right."
+      }
+    },
+    {
+      $group: {
+        _id: '$State',
+        count_StateLawViews: { $count: {} }
+      }
+    },
+    { $sort: { count_StateLawViews: -1 } },
+    { $limit: 5 }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
+
+
+Los 5 estados con más gente que consideran que sus estados deberían de tener más restricciones en leyes del aborto.
+
+db.getCollection('CAH_Data').aggregate(
+  [
+    { $project: { StateLawViews: 1, State: 1 } },
+    {
+      $match: {
+        StateLawViews:
+          "My state's abortion laws should be more restrictive."
+      }
+    },
+    {
+      $group: {
+        _id: '$State',
+        count_StateLawViews: { $count: {} }
+      }
+    },
+    { $sort: { count_StateLawViews: -1 } },
+    { $limit: 5 }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
+
+Los 5 estados con más gente que consideran que sus estados deberían de ser más permisivos en leyes del aborto.
+
+db.getCollection('CAH_Data').aggregate(
+  [
+    { $project: { StateLawViews: 1, State: 1 } },
+    {
+      $match: {
+        StateLawViews:
+          "My state's abortion laws should be more permissive."
+      }
+    },
+    {
+      $group: {
+        _id: '$State',
+        count_StateLawViews: { $count: {} }
+      }
+    },
+    { $sort: { count_StateLawViews: -1 } },
+    { $limit: 5 }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
+
+
+Los 5 estados con más gente que no están familiarizados con sus leyes del aborto.
+
+db.getCollection('CAH_Data').aggregate(
+  [
+    { $project: { StateLawViews: 1, State: 1 } },
+    {
+      $match: {
+        StateLawViews:
+          "I'm not familiar with my state's abortion laws."
+      }
+    },
+    {
+      $group: {
+        _id: '$State',
+        count_StateLawViews: { $count: {} }
+      }
+    },
+    { $sort: { count_StateLawViews: -1 } },
+    { $limit: 5 }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
