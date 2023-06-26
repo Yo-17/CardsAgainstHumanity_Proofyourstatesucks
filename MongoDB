@@ -205,3 +205,61 @@ db.getCollection('CAH_Data').aggregate(
   ],
   { maxTimeMS: 60000, allowDiskUse: true }
 );
+
+
+Query 7 
+¿Cuántas personas de acuerdo a su percepción politica ven la pena de muerte? 
+
+*Está justificada
+
+db.getCollection('CAH_Data').aggregate(
+  [
+    {
+      $project: {
+        DeathPenaltyViews: 1,
+        PoliticalViews: 1
+      }
+    },
+    {
+      $match: {
+        DeathPenaltyViews:
+          'When someone commits multiple murders, the death penalty is morally justified.'
+      }
+    },
+    {
+      $group: {
+        _id: '$PoliticalViews',
+        count_DeathPenaltyViews: { $count: {} }
+      }
+    },
+    { $sort: { count_DeathPenaltyViews: -1 } }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
+
+No esta justificada 
+
+db.getCollection('CAH_Data').aggregate(
+  [
+    {
+      $project: {
+        DeathPenaltyViews: 1,
+        PoliticalViews: 1
+      }
+    },
+    {
+      $match: {
+        DeathPenaltyViews:
+          'The death penalty is morally wrong, even when someone commits multiple murders.'
+      }
+    },
+    {
+      $group: {
+        _id: '$PoliticalViews',
+        count_DeathPenaltyViews: { $count: {} }
+      }
+    },
+    { $sort: { count_DeathPenaltyViews: -1 } }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
