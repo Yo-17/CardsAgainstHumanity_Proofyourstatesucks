@@ -148,7 +148,7 @@ FROM penalty_female
 LEFT JOIN penalty_male ON penalty_female.PatientPenalty = penalty_male.PatientPenalty;
 
 ##Query 5: Organizar de mayor a menor los Estados con mayor numero de personas que aprueban la anulacion de la sentencia de Roe v. Wade - Yes_CourtApproval_by_State
-Drop table Yes_CourtApproval_by_State;
+#Drop table Yes_CourtApproval_by_State;
 
 CREATE TABLE Yes_CourtApproval_by_State AS
 SELECT State,
@@ -157,3 +157,34 @@ FROM CAH_table01 GROUP BY State ORDER BY Buu_RvW DESC;
 
 Select * From Yes_CourtApproval_by_State;
 
+##Query 6: Que tan de acredo se encuentran las personas encuestadas con las leyes sobre el aborto en sus estados - 
+#DROP TABLE more_restrictive_by_State;
+
+CREATE TEMPORARY TABLE unfamiliar_by_State AS
+SELECT State,
+COUNT(IF(StateLawViews = "I'm not familiar with my state's abortion laws.", State, NULL)) AS unfamiliar_count 
+FROM CAH_table01 GROUP BY State;
+
+CREATE TEMPORARY TABLE laws_are_right_by_State AS
+SELECT State,
+COUNT(IF(StateLawViews = "My state's abortion laws are about right.", State, NULL)) AS laws_are_right_count 
+FROM CAH_table01 GROUP BY State;
+
+CREATE TEMPORARY TABLE more_permissive_by_State AS
+SELECT State,
+COUNT(IF(StateLawViews = "My state's abortion laws should be more permissive.", State, NULL)) AS more_permissive_count 
+FROM CAH_table01 GROUP BY State;
+
+CREATE TEMPORARY TABLE more_restrictive_by_State AS
+SELECT State,
+COUNT(IF(StateLawViews = "My state's abortion laws should be more restrictive.", State, NULL)) AS more_restrictive_count 
+FROM CAH_table01 GROUP BY State;
+
+CREATE TABLE StateLawViews_by_State AS
+SELECT unfamiliar_by_State.State, unfamiliar_by_State.unfamiliar_count, laws_are_right_by_State.laws_are_right_count, more_permissive_by_State.more_permissive_count, more_restrictive_by_State.more_restrictive_count
+FROM unfamiliar_by_State
+LEFT JOIN laws_are_right_by_State ON unfamiliar_by_State.State = laws_are_right_by_State.State
+LEFT JOIN more_permissive_by_State ON unfamiliar_by_State.State = more_permissive_by_State.State
+LEFT JOIN more_restrictive_by_State ON unfamiliar_by_State.State = more_restrictive_by_State.State;
+
+SELECT * FROM StateLawViews_by_State;
