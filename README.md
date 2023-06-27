@@ -9,28 +9,30 @@ En la segunda sección del trabajo se incluyen las consultas de MongoDB utilizan
 1. **Agrupar por puntos de vista político según nivel educativo - Tabla PoliView_by_Education**
 
    Esta consulta agrupa los datos por puntos de vista político y nivel educativo de los encuestados.
+   <img width="724" alt="Captura de pantalla 2023-06-26 a la(s) 6 41 16 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/2e8990b2-4722-49b3-a9e8-b5d083a98c5f">
 
-2. **Agrupar por grado de educación según perspectiva del aborto - Tabla AbortionViews_by_Education**
+
+3. **Agrupar por grado de educación según perspectiva del aborto - Tabla AbortionViews_by_Education**
 
    Esta consulta agrupa los datos por grado de educación y perspectiva sobre el aborto de los encuestados.
 
-3. **Agrupar por opinión de la separación del Estado y la Iglesia según afiliación a partido político - SepChurchState_by_PoliticalParty**
+4. **Agrupar por opinión de la separación del Estado y la Iglesia según afiliación a partido político - SepChurchState_by_PoliticalParty**
 
    Esta consulta agrupa los datos por opinión sobre la separación del Estado y la Iglesia y afiliación a partido político de los encuestados.
 
-4. **Criminalización del Aborto - Opiniones por género - PatientPenalty_by_Gender**
+5. **Criminalización del Aborto - Opiniones por género - PatientPenalty_by_Gender**
 
    Esta consulta muestra las opiniones sobre la criminalización del aborto, agrupadas por género de los encuestados.
 
-5. **Organizar de mayor a menor los Estados con mayor número de personas que aprueban la anulación de la sentencia de Roe v. Wade - Yes_CourtApproval_by_State**
+6. **Organizar de mayor a menor los Estados con mayor número de personas que aprueban la anulación de la sentencia de Roe v. Wade - Yes_CourtApproval_by_State**
 
    Esta consulta organiza los estados de mayor a menor según el número de personas que aprueban la anulación de la sentencia de Roe v. Wade.
 
-6. **¿Qué tan de acuerdo se encuentran las personas encuestadas con las leyes sobre el aborto en sus estados? - StateLawViews_by_State**
+7. **¿Qué tan de acuerdo se encuentran las personas encuestadas con las leyes sobre el aborto en sus estados? - StateLawViews_by_State**
 
    Esta consulta muestra el nivel de acuerdo de las personas encuestadas con las leyes sobre el aborto en sus respectivos estados.
 
-7. **La opinión sobre la pena de muerte agrupada por posicionamiento ideológico de los participantes - DeathPenaltyViews_by_PoliticalViews**
+8. **La opinión sobre la pena de muerte agrupada por posicionamiento ideológico de los participantes - DeathPenaltyViews_by_PoliticalViews**
 
    Esta consulta agrupa la opinión sobre la pena de muerte según el posicionamiento ideológico de los participantes.
 
