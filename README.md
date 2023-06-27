@@ -54,23 +54,23 @@ La consulta arrojará la siguiente tabla, en esta no se encuentran las columnas 
 4. **Criminalización del Aborto - Opiniones por género - PatientPenalty_by_Gender**
 
    Esta consulta muestra las opiniones sobre la criminalización del aborto, agrupadas por género de los encuestados.
-<img width="1436" alt="Captura de pantalla 2023-06-26 a la(s) 6 55 47 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/92e5aef9-8281-430c-8fa0-e564a6af1c9f">
+
 
 5. **Organizar de mayor a menor los Estados con mayor número de personas que aprueban la anulación de la sentencia de Roe v. Wade - Yes_CourtApproval_by_State**
 
    Esta consulta organiza los estados de mayor a menor según el número de personas que aprueban la anulación de la sentencia de Roe v. Wade.
-<img width="722" alt="Captura de pantalla 2023-06-26 a la(s) 6 56 34 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/667c5a21-888f-4575-b529-51da85ea9a67">
+
 
 6. **¿Qué tan de acuerdo se encuentran las personas encuestadas con las leyes sobre el aborto en sus estados? - StateLawViews_by_State**
 
    Esta consulta muestra el nivel de acuerdo de las personas encuestadas con las leyes sobre el aborto en sus respectivos estados.
-<img width="1427" alt="Captura de pantalla 2023-06-26 a la(s) 6 57 45 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/ac2536ef-99b8-4b1b-af5b-3ff476b3ad0f">
+
 
 
 7. **La opinión sobre la pena de muerte agrupada por posicionamiento ideológico de los participantes - DeathPenaltyViews_by_PoliticalViews**
 
    Esta consulta agrupa la opinión sobre la pena de muerte según el posicionamiento ideológico de los participantes.
-<img width="721" alt="Captura de pantalla 2023-06-26 a la(s) 6 59 15 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/2161c29d-890a-4150-97aa-4858828ba73f">
+
 
 
 ## Instrucciones de Uso - MySQL Workbench
