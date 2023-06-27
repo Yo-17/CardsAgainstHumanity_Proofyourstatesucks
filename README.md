@@ -91,9 +91,18 @@ Esto nos arroja la siguiente tabla:
 
    <img width="1371" alt="Captura de pantalla 2023-06-26 a la(s) 11 50 55 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/9090eda2-33ea-43a1-9113-e13a8e45a8cb">
    
+**Otros ejemplos de lo que podemos hacer con vistas son**
+1. Crear una tabla donde se cuenten las personas que estan a favor y en contra de la separación del Estado y de la Iglesia, utilizando tablas temporales y después unirla con la tabla DeathPenaltyViews_by_PoliticalViews para comparar ambos posicionamientos ideológicos por como se identifican los participantes:
 
+<img width="1117" alt="Captura de pantalla 2023-06-27 a la(s) 1 02 55 a m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/b04ff5fa-5fde-4a05-9247-32e986a9ef05">
 
+2. Comparar el número de personas que están de acuerdo con la derogación de Roe v. Wade y los que creen que las leyes en torno al aborto deberían ser mas permisivas y más restrictivas.
 
+<img width="1044" alt="Captura de pantalla 2023-06-27 a la(s) 1 18 49 a m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/8117f447-9a6c-43f8-8a51-a597c64a10e3">
+
+3. Filtrar el número de personas que están de acuerdo con la derogación de Roe v. Wade pero creen que las leyes entorno al aborto deberían ser más permisivas por estado en orden descendente.
+   
+<img width="1117" alt="Captura de pantalla 2023-06-27 a la(s) 1 31 17 a m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/b7970297-1d28-4634-a787-f39a5fa3d5f2">
 
 
 ## Instrucciones de Uso - MySQL Workbench
