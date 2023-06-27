@@ -264,7 +264,35 @@ En la segunda sección del trabajo se incluyen las consultas de MongoDB utilizan
     ],
     { maxTimeMS: 60000, allowDiskUse: true }
   );
-  ``
+  ```
+
+## Instrucciones de Uso - MongoDB
+
+Para utilizar las consultas de este repositorio, sigue los pasos a continuación:
+
+1. Clona el repositorio en tu máquina local usando el siguiente comando:
+
+   ```bash
+   git clone https://github.com/tu-usuario/repositorio-mongodb.git
+   ```
+
+   Asegúrate de reemplazar `tu-usuario` con tu nombre de usuario de GitHub y `repositorio-mongodb` con el nombre del repositorio.
+
+2. Accede al directorio clonado:
+
+   ```bash
+   cd repositorio-mongodb
+   ```
+
+3. Explora el directorio `consultas` para revisar las consultas disponibles. Abre el archivo correspondiente a la consulta que deseas ejecutar y copia su contenido.
+
+4. Inicia una instancia de MongoDB y conéctate a tu base de datos.
+
+5. Abre una interfaz de línea de comandos de MongoDB y pega la consulta copiada.
+
+6. Ejecuta la consulta para obtener los resultados deseados.
+
+7. Repite los pasos 3-6 para ejecutar otras consultas según tus necesidades.
 
 ## Contribuciones
 
@@ -286,3 +314,9 @@ Si deseas contribuir a este repositorio, por favor sigue los siguientes pasos:
 
    ```
    git commit -m "Añadir nueva consulta y actualizar documentación"
+
+## Contacto
+
+Si tienes alguna pregunta o inquietud relacionada con este repositorio, puedes contactarnos a través de nuestros perfiles de GitHub @Yo-17 y @marcocenl.
+
+¡Gracias por utilizar el repositorio de Consultas de MongoDB! Esperamos que sea útil para tu análisis de datos.
