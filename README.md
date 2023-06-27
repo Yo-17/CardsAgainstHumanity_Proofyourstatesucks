@@ -12,29 +12,61 @@ En la segunda sección del trabajo se incluyen las consultas de MongoDB utilizan
    <img width="724" alt="Captura de pantalla 2023-06-26 a la(s) 6 41 16 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/2e8990b2-4722-49b3-a9e8-b5d083a98c5f">
 
 
-3. **Agrupar por grado de educación según perspectiva del aborto - Tabla AbortionViews_by_Education**
+2. **Agrupar por grado de educación según perspectiva del aborto - Tabla AbortionViews_by_Education**
 
    Esta consulta agrupa los datos por grado de educación y perspectiva sobre el aborto de los encuestados.
+   <img width="1436" alt="Captura de pantalla 2023-06-26 a la(s) 6 44 04 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/e029c61c-5b88-4c46-a23a-69cb2b477080">
 
-4. **Agrupar por opinión de la separación del Estado y la Iglesia según afiliación a partido político - SepChurchState_by_PoliticalParty**
+
+3. **Agrupar por opinión de la separación del Estado y la Iglesia según afiliación a partido político - SepChurchState_by_PoliticalParty**
 
    Esta consulta agrupa los datos por opinión sobre la separación del Estado y la Iglesia y afiliación a partido político de los encuestados.
+   *Para consultar los porcentajes de participantes que desean que haya una separación del Estado y de la Iglesia según su afiliación política se puede utilizar el siguiente fragmento:
+   ```
+   SELECT PoliticalParty, Enforce_Separation_count,
+   round(((Enforce_Separation_count * 100) / temp.Enforce_Separation_countSUM),2) AS Enforce_Separation_Percentage
+   FROM Enforce_Separation
+   CROSS JOIN (SELECT SUM(Enforce_Separation_count) AS Enforce_Separation_countSUM FROM Enforce_Separation) temp;
+   ´´´
+   Esto nos da la siguiente tabla temporal:
+   <img width="1436" alt="Captura de pantalla 2023-06-26 a la(s) 6 48 00 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/3a818e5d-cce6-48a4-82dc-b8b51f31b062">
 
-5. **Criminalización del Aborto - Opiniones por género - PatientPenalty_by_Gender**
+*Para consultar los porcentajes de participantes que desean frenar la separación del Estado y de la Iglesia según su afiliación política se puede utilizar el siguiente fragmento:
+   ```
+   SELECT PoliticalParty, Stop_Enforcing_count,
+   round(((Stop_Enforcing_count * 100) / temp.Stop_Enforcing_countSUM),2) AS Stop_Enforcing_Percentage
+   FROM Stop_Enforcing
+   CROSS JOIN (SELECT SUM(Stop_Enforcing_count) AS Stop_Enforcing_countSUM FROM Stop_Enforcing) temp;
+   ´´´
+ Esto nos da la siguiente tabla temporal:
+<img width="722" alt="Captura de pantalla 2023-06-26 a la(s) 6 49 41 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/29ebeda1-66a0-448b-abe0-26dca8049eaa">
+
+La consulta arrojará la siguiente tabla, en esta no se encuentran las columnas de porcentaje, sólo las de los conteos:
+
+<img width="717" alt="Captura de pantalla 2023-06-26 a la(s) 6 51 49 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/494b2f3c-7a77-425b-8423-0bce62265d22">
+
+
+4. **Criminalización del Aborto - Opiniones por género - PatientPenalty_by_Gender**
 
    Esta consulta muestra las opiniones sobre la criminalización del aborto, agrupadas por género de los encuestados.
+<img width="1436" alt="Captura de pantalla 2023-06-26 a la(s) 6 55 47 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/92e5aef9-8281-430c-8fa0-e564a6af1c9f">
 
-6. **Organizar de mayor a menor los Estados con mayor número de personas que aprueban la anulación de la sentencia de Roe v. Wade - Yes_CourtApproval_by_State**
+5. **Organizar de mayor a menor los Estados con mayor número de personas que aprueban la anulación de la sentencia de Roe v. Wade - Yes_CourtApproval_by_State**
 
    Esta consulta organiza los estados de mayor a menor según el número de personas que aprueban la anulación de la sentencia de Roe v. Wade.
+<img width="722" alt="Captura de pantalla 2023-06-26 a la(s) 6 56 34 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/667c5a21-888f-4575-b529-51da85ea9a67">
 
-7. **¿Qué tan de acuerdo se encuentran las personas encuestadas con las leyes sobre el aborto en sus estados? - StateLawViews_by_State**
+6. **¿Qué tan de acuerdo se encuentran las personas encuestadas con las leyes sobre el aborto en sus estados? - StateLawViews_by_State**
 
    Esta consulta muestra el nivel de acuerdo de las personas encuestadas con las leyes sobre el aborto en sus respectivos estados.
+<img width="1427" alt="Captura de pantalla 2023-06-26 a la(s) 6 57 45 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/ac2536ef-99b8-4b1b-af5b-3ff476b3ad0f">
 
-8. **La opinión sobre la pena de muerte agrupada por posicionamiento ideológico de los participantes - DeathPenaltyViews_by_PoliticalViews**
+
+7. **La opinión sobre la pena de muerte agrupada por posicionamiento ideológico de los participantes - DeathPenaltyViews_by_PoliticalViews**
 
    Esta consulta agrupa la opinión sobre la pena de muerte según el posicionamiento ideológico de los participantes.
+<img width="721" alt="Captura de pantalla 2023-06-26 a la(s) 6 59 15 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/2161c29d-890a-4150-97aa-4858828ba73f">
+
 
 ## Instrucciones de Uso - MySQL Workbench
 
