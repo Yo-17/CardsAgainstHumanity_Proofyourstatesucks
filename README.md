@@ -43,6 +43,7 @@ En la segunda sección del trabajo se incluyen las consultas de MongoDB utilizan
     ```
 
  Esto nos da la siguiente tabla temporal:
+
 <img width="722" alt="Captura de pantalla 2023-06-26 a la(s) 6 49 41 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/29ebeda1-66a0-448b-abe0-26dca8049eaa">
 
 La consulta arrojará la siguiente tabla, en esta no se encuentran las columnas de porcentaje, sólo las de los conteos:
