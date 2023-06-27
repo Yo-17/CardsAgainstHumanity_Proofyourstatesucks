@@ -319,4 +319,4 @@ Si deseas contribuir a este repositorio, por favor sigue los siguientes pasos:
 
 Si tienes alguna pregunta o inquietud relacionada con este repositorio, puedes contactarnos a través de nuestros perfiles de GitHub @Yo-17 y @marcocenl.
 
-¡Gracias por utilizar el repositorio de Consultas de MongoDB! Esperamos que sea útil para tu análisis de datos.
+¡Gracias por utilizar este repositorio! Esperamos que sea útil para tu análisis de datos.
