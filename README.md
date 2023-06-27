@@ -165,6 +165,11 @@ Esto nos arroja la siguiente tabla:
       { maxTimeMS: 60000, allowDiskUse: true }
     );
     ```
+![Captura de Pantalla 2023-06-27 a la(s) 17 58 41](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/9d12f0a6-44ce-4f03-bd6d-4819925b358e)
+![Captura de Pantalla 2023-06-27 a la(s) 17 58 49](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/04571fee-99b9-4213-82ce-c55592284e99)
+![Captura de Pantalla 2023-06-27 a la(s) 17 58 57](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/f614caea-8e5d-4654-a3ef-711c92e1e61b)
+
+
 
 ### Opiniones sobre embarazos accidentales con anticonceptivos en un año
 
