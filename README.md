@@ -22,22 +22,26 @@ En la segunda sección del trabajo se incluyen las consultas de MongoDB utilizan
 
    Esta consulta agrupa los datos por opinión sobre la separación del Estado y la Iglesia y afiliación a partido político de los encuestados.
    *Para consultar los porcentajes de participantes que desean que haya una separación del Estado y de la Iglesia según su afiliación política se puede utilizar el siguiente fragmento:
+   
    ```
    SELECT PoliticalParty, Enforce_Separation_count,
    round(((Enforce_Separation_count * 100) / temp.Enforce_Separation_countSUM),2) AS Enforce_Separation_Percentage
    FROM Enforce_Separation
    CROSS JOIN (SELECT SUM(Enforce_Separation_count) AS Enforce_Separation_countSUM FROM Enforce_Separation) temp;
    ´´´
+   
    Esto nos da la siguiente tabla temporal:
    <img width="1436" alt="Captura de pantalla 2023-06-26 a la(s) 6 48 00 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/3a818e5d-cce6-48a4-82dc-b8b51f31b062">
 
 *Para consultar los porcentajes de participantes que desean frenar la separación del Estado y de la Iglesia según su afiliación política se puede utilizar el siguiente fragmento:
+
    ```
    SELECT PoliticalParty, Stop_Enforcing_count,
    round(((Stop_Enforcing_count * 100) / temp.Stop_Enforcing_countSUM),2) AS Stop_Enforcing_Percentage
    FROM Stop_Enforcing
    CROSS JOIN (SELECT SUM(Stop_Enforcing_count) AS Stop_Enforcing_countSUM FROM Stop_Enforcing) temp;
    ´´´
+
  Esto nos da la siguiente tabla temporal:
 <img width="722" alt="Captura de pantalla 2023-06-26 a la(s) 6 49 41 p m" src="https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/131808869/29ebeda1-66a0-448b-abe0-26dca8049eaa">
 
