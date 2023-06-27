@@ -1,7 +1,7 @@
 USE CAH;
 SHOW tables;
 
-DROP TABLE IF EXISTS Female_Participants, grad_degree, bach_degree, high_school, Male_Participants, Political_Party_frequency, PoliView_by_Education, some_high_school;
+#DROP TABLE IF EXISTS Female_Participants, grad_degree, bach_degree, high_school, Male_Participants, Political_Party_frequency, PoliView_by_Education, some_high_school;
 
 Select * from CAH_table01;
 
@@ -58,35 +58,36 @@ LEFT JOIN bach_degree ON some_high_school.PoliticalViews = bach_degree.Political
 ## Query 2:  Agrupar por grado de educación segun perspectiva del aborto - Tabla AbortionViews_by_Education
 #DROP TABLE Education;
 
-CREATE TEMPORARY TABLE some_high_school AS
+CREATE TEMPORARY TABLE some_high_school_ab AS
 SELECT AbortionViews, count(ParticipantID) AS some_high_school_count FROM CAH_table01 WHERE education = "Some high school" GROUP BY AbortionViews;
 
-CREATE TEMPORARY TABLE high_school AS
+CREATE TEMPORARY TABLE high_school_ab AS
 SELECT AbortionViews, count(ParticipantID) AS high_school_count FROM CAH_table01 WHERE education = "High school or high school equivalent" GROUP BY AbortionViews;
 
-CREATE TEMPORARY TABLE grad_degree AS
+CREATE TEMPORARY TABLE grad_degree_ab AS
 SELECT AbortionViews, count(ParticipantID) AS grad_degree_count FROM CAH_table01 WHERE education = "Graduate degree" GROUP BY AbortionViews;
 
-CREATE TEMPORARY TABLE bach_degree AS
+CREATE TEMPORARY TABLE bach_degree_ab AS
 SELECT AbortionViews, count(ParticipantID) AS bach_degree_count FROM CAH_table01 WHERE education = "Bachelor's degree or equivalent" GROUP BY AbortionViews;
 
 CREATE TABLE AbortionView_by_Education AS
-SELECT some_high_school.AbortionViews, some_high_school.some_high_school_count, high_school.high_school_count, grad_degree.grad_degree_count, bach_degree.bach_degree_count
-FROM some_high_school
-LEFT JOIN high_school ON some_high_school.AbortionViews = high_school.AbortionViews
-LEFT JOIN grad_degree ON some_high_school.AbortionViews = grad_degree.AbortionViews
-LEFT JOIN bach_degree ON some_high_school.AbortionViews = bach_degree.AbortionViews;
+SELECT some_high_school_ab.AbortionViews, some_high_school_ab.some_high_school_count, high_school_ab.high_school_count, grad_degree_ab.grad_degree_count, bach_degree_ab.bach_degree_count
+FROM some_high_school_ab
+LEFT JOIN high_school_ab ON some_high_school_ab.AbortionViews = high_school_ab.AbortionViews
+LEFT JOIN grad_degree_ab ON some_high_school_ab.AbortionViews = grad_degree_ab.AbortionViews
+LEFT JOIN bach_degree_ab ON some_high_school_ab.AbortionViews = bach_degree_ab.AbortionViews;
 
 SELECT * FROM AbortionView_by_Education;
 
 ## Query 3: Agrupar por opinion de la separacion del Edo y la Iglesia segun afiliacion a partido politico - SepChurchState_by_PoliticalParty
-#Drop table Enforce_Separation;
+Drop table Enforce_Separation;
 
 #Create Enforce_Separation
-CREATE TEMPORARY TABLE Enforce_Separation AS
+CREATE TABLE Enforce_Separation AS
 SELECT PoliticalParty, count(ParticipantID) AS Enforce_Separation_count 
 FROM CAH_table01 WHERE SepChurchState = "The federal government should enforce separation of church and state." 
 GROUP BY PoliticalParty;
+
 
 CREATE VIEW Enforce_Separation_Percentage AS
 SELECT PoliticalParty, Enforce_Separation_count,
@@ -95,7 +96,7 @@ FROM Enforce_Separation
 CROSS JOIN (SELECT SUM(Enforce_Separation_count) AS Enforce_Separation_countSUM FROM Enforce_Separation) temp;
 
 #Create Stop_Enforcing
-CREATE TEMPORARY TABLE Stop_Enforcing AS
+CREATE TABLE Stop_Enforcing AS
 SELECT PoliticalParty, count(ParticipantID) AS Stop_Enforcing_count 
 FROM CAH_table01 WHERE SepChurchState = "The federal government should stop enforcing separation of church and state." 
 GROUP BY PoliticalParty;
@@ -240,3 +241,4 @@ FROM CAH_table01 WHERE StateLawViews = "My state's abortion laws should be more 
 GROUP BY State ORDER BY Disagree_w_RoevWade DESC;
 
 SELECT * FROM Yes_CourtApproval_More_Permissive;
+
