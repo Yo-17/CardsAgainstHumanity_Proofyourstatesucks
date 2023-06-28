@@ -191,6 +191,11 @@ Esto nos arroja la siguiente tabla:
       { maxTimeMS: 60000, allowDiskUse: true }
     );
     ```
+![Captura de Pantalla 2023-06-27 a la(s) 18 00 10](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/bded0a97-78d7-4a75-aae1-dfdb26a56bb9)
+![Captura de Pantalla 2023-06-27 a la(s) 18 00 16](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/0e7a32f3-1c09-45dc-b1ae-d29b46d06478)
+![Captura de Pantalla 2023-06-27 a la(s) 18 00 23](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/a2fc691e-756a-4179-b28f-3709d0434be3)
+
+
 
   - Para mujeres:
     ```
