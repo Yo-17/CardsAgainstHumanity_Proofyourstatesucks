@@ -24,6 +24,9 @@ CREATE TABLE Male_Participants AS
   
   Select Count(*) from Male_Participants;
   
+  SELECT Gender, Count(*) FROM CAH_table01 GROUP BY Gender;
+  # Para los fines de las siguientes tablas, en agrupaciones de genero solo se tomaran en cuenta hombres y mujeres
+  
   Select Count(*) From CAH_table01 WHERE PoliticalParty = 'Democrat';
   
   #Crear una tabla donde se agrupen los participantes por political party 
