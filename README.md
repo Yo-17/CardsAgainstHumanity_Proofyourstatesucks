@@ -395,33 +395,11 @@ Esto nos arroja la siguiente tabla:
 ![Captura de Pantalla 2023-06-27 a la(s) 18 27 09](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/929d3f4a-1b87-4db5-9138-debf6ab5b55b)
 
 
-## Instrucciones de Uso - MongoDB
+## Conclusiones
 
-Para utilizar las consultas de este repositorio, sigue los pasos a continuación:
+Para fines prácticos se planteó el analizar la misma base con una base estructurada y otra no estructurada, en este caso MYSQL y MongoDB, para algunas consultas el hecho de usar una base de datos estructurada es más práctico así como algunas consultas en las no estructuradas. 
 
-1. Clona el repositorio en tu máquina local usando el siguiente comando:
-
-   ```bash
-   git clone https://github.com/tu-usuario/repositorio-mongodb.git
-   ```
-
-   Asegúrate de reemplazar `tu-usuario` con tu nombre de usuario de GitHub y `repositorio-mongodb` con el nombre del repositorio.
-
-2. Accede al directorio clonado:
-
-   ```bash
-   cd repositorio-mongodb
-   ```
-
-3. Explora el directorio `consultas` para revisar las consultas disponibles. Abre el archivo correspondiente a la consulta que deseas ejecutar y copia su contenido.
-
-4. Inicia una instancia de MongoDB y conéctate a tu base de datos.
-
-5. Abre una interfaz de línea de comandos de MongoDB y pega la consulta copiada.
-
-6. Ejecuta la consulta para obtener los resultados deseados.
-
-7. Repite los pasos 3-6 para ejecutar otras consultas según tus necesidades.
+En algunas consultas hubo algunos retos como en MongoDB al tener demasiados datos a analizar y no ver una estructura tal cual.
 
 ## Contribuciones
 
