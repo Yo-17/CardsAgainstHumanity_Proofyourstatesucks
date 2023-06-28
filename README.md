@@ -364,7 +364,7 @@ Esto nos arroja la siguiente tabla:
 
 
 
-- **Los 5 estados con mayor genre que no están familiarizada con las leyes del aborto**
+- **Los 5 estados con mayor gente que no están familiarizada con las leyes del aborto**
 
   ```
   db.getCollection('CAH_Data').aggregate(
