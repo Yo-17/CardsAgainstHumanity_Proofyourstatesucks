@@ -213,6 +213,12 @@ Esto nos arroja la siguiente tabla:
       { maxTimeMS: 60000, allowDiskUse: true }
     );
     ```
+![Captura de Pantalla 2023-06-27 a la(s) 18 02 20](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/f59b9ced-487a-44d0-8cf7-65a75a1cc062)
+![Captura de Pantalla 2023-06-27 a la(s) 18 02 28](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/f48ab44c-934c-427d-aba1-e651b3bed1ad)
+![Captura de Pantalla 2023-06-27 a la(s) 18 02 35](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/e7412994-6a14-47d0-a046-0248c414d981)
+
+
+
 
 ### Opiniones sobre embarazos accidentales con el método "Pulling out" en un año
 
@@ -236,6 +242,11 @@ Esto nos arroja la siguiente tabla:
 
     );
     ```
+![Captura de Pantalla 2023-06-27 a la(s) 18 03 36](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/c7b7553a-9bc5-4329-8d1d-ab606cfb7d1b)
+![Captura de Pantalla 2023-06-27 a la(s) 18 03 42](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/8a3dd877-155e-4eeb-9a04-2fd3feb7cd7f)
+![Captura de Pantalla 2023-06-27 a la(s) 18 03 49](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/2807f125-9631-4902-aa0a-6ffee4ce5dc2)
+
+
 
   - Para mujeres:
     ```
@@ -253,6 +264,9 @@ Esto nos arroja la siguiente tabla:
       { maxTimeMS: 60000, allowDiskUse: true }
     );
     ```
+![Captura de Pantalla 2023-06-27 a la(s) 18 03 36](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/2658f20b-d3e2-49b2-b78a-a8e4c9a3e90f)
+![Captura de Pantalla 2023-06-27 a la(s) 18 03 42](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/8e5ef769-7f02-4c4e-8ebb-40048a029111)
+![Captura de Pantalla 2023-06-27 a la(s) 18 03 49](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/87d10c32-508c-4d15-b275-e34eb1d8e383)
 
 ### Perspectivas sobre las leyes del aborto
 
