@@ -264,13 +264,14 @@ Esto nos arroja la siguiente tabla:
       { maxTimeMS: 60000, allowDiskUse: true }
     );
     ```
-![Captura de Pantalla 2023-06-27 a la(s) 18 03 36](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/2658f20b-d3e2-49b2-b78a-a8e4c9a3e90f)
-![Captura de Pantalla 2023-06-27 a la(s) 18 03 42](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/8e5ef769-7f02-4c4e-8ebb-40048a029111)
-![Captura de Pantalla 2023-06-27 a la(s) 18 03 49](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/87d10c32-508c-4d15-b275-e34eb1d8e383)
+![Captura de Pantalla 2023-06-27 a la(s) 18 07 01](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/eb20eab2-7fa0-4d67-9bd6-8db2797feb13)
+![Captura de Pantalla 2023-06-27 a la(s) 18 07 10](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/d700713e-6465-42f9-90d4-29680e6a40a6)
+![Captura de Pantalla 2023-06-27 a la(s) 18 07 20](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/e0b570c3-6870-4ab0-be9f-b22a82791a79)
+
 
 ### Perspectivas sobre las leyes del aborto
 
-- **Los 5 estados que consideran conformes las leyes del aborto**
+- **Los 5 estados que más están conformes con las leyes del aborto**
 
   ```
   db.getCollection('CAH_Data').aggregate(
@@ -293,8 +294,15 @@ Esto nos arroja la siguiente tabla:
     { maxTimeMS: 60000, allowDiskUse: true }
   );
   ```
+![Captura de Pantalla 2023-06-27 a la(s) 18 15 23](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/88e0cc3e-6f51-4cc2-8755-ee7443c98eb4)
+![Captura de Pantalla 2023-06-27 a la(s) 18 15 52](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/9c270095-ad6e-42cc-89cc-fc7429e6f1a8)
+![Captura de Pantalla 2023-06-27 a la(s) 18 16 02](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/dc76009b-e0f8-4fbf-a4f5-6e0e0f7ca22e)
+![Captura de Pantalla 2023-06-27 a la(s) 18 16 08](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/b66414c9-efdb-4987-8f21-20b661722689)
+![Captura de Pantalla 2023-06-27 a la(s) 18 16 16](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/b0e1fe82-fcf7-4f04-8f79-555b412983e1)
+![Captura de Pantalla 2023-06-27 a la(s) 18 18 19](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/4decc545-35a1-4913-9f73-0ec0517ea868)
 
-- **Los 5 estados con más personas que consideran que las leyes del aborto deberían ser más restrictivas**
+
+- **Los 5 estados que más consideran que las leyes del aborto deberían ser más restrictivas**
 
   ```
   db.getCollection('CAH_Data').aggregate(
@@ -317,8 +325,14 @@ Esto nos arroja la siguiente tabla:
     { maxTimeMS: 60000, allowDiskUse: true }
   );
   ```
+![Captura de Pantalla 2023-06-27 a la(s) 18 19 52](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/2421c1b8-e96f-469a-960d-1481a17ad9d0)
+![Captura de Pantalla 2023-06-27 a la(s) 18 20 04](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/23480801-5c82-4b84-920f-6dfc0298100d)
+![Captura de Pantalla 2023-06-27 a la(s) 18 20 10](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/c2305736-e58b-4d44-995e-db9d782caf72)
+![Captura de Pantalla 2023-06-27 a la(s) 18 20 19](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/ca5c6221-aa46-4bbf-8336-cc05bacf092b)
+![Captura de Pantalla 2023-06-27 a la(s) 18 20 32](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/0f6e6d70-eeff-4248-b6f1-14a1a3e1f74a)
+![Captura de Pantalla 2023-06-27 a la(s) 18 20 59](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/00593e59-9efb-4d8a-835a-a351674443c6)
 
-- **Los 5 estados con más personas que consideran que las leyes del aborto deberían ser más permisivas**
+- **Los 5 estados que más consideran que las leyes del aborto deberían ser más permisivas**
 
   ```
   db.getCollection('CAH_Data').aggregate(
@@ -341,8 +355,16 @@ Esto nos arroja la siguiente tabla:
     { maxTimeMS: 60000, allowDiskUse: true }
   );
   ```
+![Captura de Pantalla 2023-06-27 a la(s) 18 22 28](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/fbc3c1b9-edfd-4b57-9a2a-b891830bf3f9)
+![Captura de Pantalla 2023-06-27 a la(s) 18 22 39](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/9b7f37e4-7ff8-42a3-a14f-6c43e913e096)
+![Captura de Pantalla 2023-06-27 a la(s) 18 22 47](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/3d0839fd-4112-42e0-aaa8-8b0b31e4920b)
+![Captura de Pantalla 2023-06-27 a la(s) 18 22 55](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/2d5079cf-7303-4c97-a222-7b4de272c52f)
+![Captura de Pantalla 2023-06-27 a la(s) 18 23 03](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/b0252328-7e9b-462c-b27e-6a75a76a1ae9)
+![Captura de Pantalla 2023-06-27 a la(s) 18 23 25](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/9e52d6f3-9a5a-4a1e-8d85-0a724ba59c0d)
 
-- **Los 5 estados con más personas que no están familiarizadas con las leyes del aborto**
+
+
+- **Los 5 estados con mayor genre que no están familiarizada con las leyes del aborto**
 
   ```
   db.getCollection('CAH_Data').aggregate(
@@ -365,6 +387,13 @@ Esto nos arroja la siguiente tabla:
     { maxTimeMS: 60000, allowDiskUse: true }
   );
   ```
+![Captura de Pantalla 2023-06-27 a la(s) 18 25 26](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/94a23bcd-0489-44ce-8e88-47a7047734bd)
+![Captura de Pantalla 2023-06-27 a la(s) 18 25 34](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/8f1c42cf-6c18-4068-a4f8-3be1a04fa471)
+![Captura de Pantalla 2023-06-27 a la(s) 18 25 40](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/671e9f87-2cff-4a49-ae3b-75692f278b5e)
+![Captura de Pantalla 2023-06-27 a la(s) 18 25 49](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/a0f53d31-7604-4978-a8cf-059aea262ce6)
+![Captura de Pantalla 2023-06-27 a la(s) 18 25 55](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/3e8cfcd6-d52f-4dcf-9d8f-abe417e4623e)
+![Captura de Pantalla 2023-06-27 a la(s) 18 27 09](https://github.com/Yo-17/CardsAgainstHumanity_Proofyourstatesucks/assets/137369012/929d3f4a-1b87-4db5-9138-debf6ab5b55b)
+
 
 ## Instrucciones de Uso - MongoDB
 
